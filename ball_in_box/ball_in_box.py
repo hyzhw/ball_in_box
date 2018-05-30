@@ -11,7 +11,7 @@ def ball_in_a_box(m,blockers):
     k=0
     BalloonXPos=[0]*int(m)
     BalloonYPos=[0]*int(m)
-    while k<1000000:
+    while k<50000:
         flag1=0
         flag2=0
         flag3=0

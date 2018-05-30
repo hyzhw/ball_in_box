@@ -60,5 +60,7 @@ def ball_in_a_box(m,blockers):
         r=MaxRadius
         circles.append((x,y,r))
     return circles
-#print(MaxRadius)		
+print(ball_in_a_box(5,[(0.3,0.4),(0.7,0.9),(-0.4,-0.6)]))
+print(MaxRadius**2*math.pi)
+		
 #os.system("pause")

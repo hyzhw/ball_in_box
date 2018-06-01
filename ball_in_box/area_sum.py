@@ -12,7 +12,7 @@ def area_sum(circles):
 if __name__ == '__main__':
     num_of_circle = 5
     blockers = [(0.5, 0.5)
-               ,(0.5, -0.3)]
+               ,(0.5, -0.3)]     #障碍物坐标及大小
     
     circles = bb.ball_in_box(num_of_circle, blockers)
     

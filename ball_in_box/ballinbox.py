@@ -15,7 +15,7 @@ def ball_in_box(m, blockers):   #设置变量m用户自行输入
     mBalloonR=[0]*int(m)
     mBalloonXPos=[0]*int(m)
     mBalloonYPos=[0]*int(m)
-    while k<50000:
+    while k<50000:               #判断k值以便后序操作 
         sum=0
         BalloonR=[0]*int(m)
         for j in range(0,int(m)):

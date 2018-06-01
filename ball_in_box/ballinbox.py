@@ -4,7 +4,8 @@ import random
 
 __all__ = ['ball_in_box']
 
-def ball_in_box(m, blockers):
+def ball_in_box(m, blockers):   #设置变量m用户自行输入
+    
     k=0
     max=0
     circles = []
@@ -32,7 +33,7 @@ def ball_in_box(m, blockers):
                     continue
     
             r=math.fabs(1-BalloonXPos[j])
-            if(math.fabs(1-BalloonYPos[j])<r):
+            if(math.fabs(1-BalloonYPos[j])<r):    #对圆半径与边界的判断
                 r=math.fabs(1-BalloonYPos[j])
             if(math.fabs(-1-BalloonXPos[j])<r):
                 r=math.fabs(-1-BalloonXPos[j])
@@ -62,4 +63,4 @@ def ball_in_box(m, blockers):
         circles.append((x, y, r))
         
     
-    return circles
+    return circles    #操作结束后返回圆

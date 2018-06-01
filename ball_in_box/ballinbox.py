@@ -11,7 +11,9 @@ def ball_in_box(m, blockers):
     BalloonR=[0]*int(m)
     BalloonXPos=[0]*int(m)
     BalloonYPos=[0]*int(m)
-
+    mBalloonR=[0]*int(m)
+    mBalloonXPos=[0]*int(m)
+    mBalloonYPos=[0]*int(m)
     while k<50000:
         sum=0
         BalloonR=[0]*int(m)
@@ -46,14 +48,18 @@ def ball_in_box(m, blockers):
             BalloonR[j]=r
             sum=sum+BalloonR[j]**2
         if(sum>max):
+            for x in range(m):
+                mBalloonXPos[x]=BalloonXPos[x]
+                mBalloonYPos[x]=BalloonYPos[x]
+                mBalloonR[x]=BalloonR[x]  
             max=sum
         k=k+1
     for circle_index in range(m):
 
-        x = BalloonXPos[circle_index]
-        y = BalloonYPos[circle_index]
-        r = BalloonR[circle_index]
+        x = mBalloonXPos[circle_index]
+        y = mBalloonYPos[circle_index]
+        r = mBalloonR[circle_index]
         circles.append((x, y, r))
-        circle_index += 1
+        
     
     return circles
